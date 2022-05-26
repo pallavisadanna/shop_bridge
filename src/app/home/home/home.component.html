@@ -1,0 +1,14 @@
+<div class="body">
+    <app-header (emitValue)="searchData($event)" [searchValue]="searchValue"></app-header>
+    <div class="sub-header">
+        <div class="add"><button class="submit" (click)="addItem()">Add New Item</button></div>
+        <div class="sort">
+            <div class="label">Sort by:&emsp;</div>
+            <button class="reset" (click)="sortByTitle()" [ngClass]="{'active':titleSort == true}">Title</button>
+            <button class="reset" (click)="sortByPopularity()"
+                [ngClass]="{'active':popularitySort == true}">Popularity</button>
+        </div>
+    </div>
+    <app-movie-card *ngIf="movies" [movies]="movies"></app-movie-card>
+    <div class="loading" *ngIf="loading == true">Loading...</div>
+</div>

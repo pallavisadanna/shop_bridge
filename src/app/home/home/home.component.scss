@@ -1,0 +1,45 @@
+.body{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+.label{
+    font-size: large;
+    margin-top: 5px;
+}
+.sub-header{
+    display: flex;
+    justify-content: space-between;
+}
+.add{
+    padding: 1rem;
+}
+.sort{
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+    font-size: large;
+    button{
+        margin: 0px 0.6rem;
+    }
+}
+.reset{
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+.active{
+    background-color: var(--secondary-color);
+    // color:black;
+    border: 2px solid var(--secondary-color);
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: larger;
+}

@@ -1,0 +1,87 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    height: 2.8rem;
+    font-size: larger;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.back{
+    // padding: 1rem;
+    a{
+        position: absolute;
+        top: 0.3rem;
+        margin-left: 0.4rem;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        .shop{
+            margin-bottom: -5px;
+            color: lightgray;
+        }
+    }
+    a:hover {
+        color: white;
+        .shop{
+            color: white;
+        }
+    }
+}
+
+    .card{
+        position: absolute;
+        left: 25%;
+        top: 10%;
+        padding: 1rem;
+        background: rgba(233,232,232);
+        border-radius: 0.2rem;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+        margin:2rem;
+        width: 40%;
+}
+.add{
+    font-size: larger;
+    color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+.input-label{
+    font-weight: bold;
+    margin-top: 20px !important;
+}
+.input{
+    width: 99%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin:5px 10px 0px 0px; 
+    padding: 5px;
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+    .reset{
+        margin-right: 5px;
+    }
+}
+span{
+    font-size: x-small;
+    color: red;
+    margin-top:-4px;
+    margin-bottom: 5px;
+}
+
+@media(max-width:600px){
+   .card{ left: 10%;
+    width: 60%;
+    padding: 1rem;
+   }
+
+}
+@media(max-width:350px){
+.card{left: 5%;
+}
+}

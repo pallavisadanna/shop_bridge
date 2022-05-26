@@ -1,0 +1,54 @@
+<div class="body">
+  <div class="header">
+      <div class="back"><a href="/home"><div class="shop">SHOP</div><div>BRIDGE</div></a></div>
+  </div>
+  <div class="card">
+      <div class="add">Add Item</div>
+      <form [formGroup]="itemForm">
+    <div>
+        <label class="input-label">Title</label><br>
+        <input class="input" type="text" formControlName="title" required="true">
+        <div><span *ngIf="itemForm.get('title')?.touched && itemForm.get('title')?.errors?.['required']">Title Required</span>
+        </div>
+    </div>
+    <div >
+        <label class="input-label">Date</label><br>
+        <input class="input" type="date" formControlName="date">
+        <div><span *ngIf="itemForm.get('date')?.touched && itemForm.get('date')?.errors?.['required']">Date Required</span>
+        </div>
+    </div> 
+    <div >
+        <label class="input-label">Price($)</label><br>
+        <input class="input" type="number" formControlName="price">
+        <div><span *ngIf="itemForm.get('price')?.touched && itemForm.get('price')?.errors?.['required']">Price Required</span>
+        </div>
+    </div> <div >
+        <label class="input-label">Image address</label><br>
+        <input class="input" type="url" formControlName="photo">
+        <div><span *ngIf="itemForm.get('photo')?.touched && itemForm.get('photo')?.errors?.['required']">Image address Required</span>
+        </div>
+    </div>  <div >
+        <label class="input-label">Votes</label><br>
+        <input class="input" type="number" formControlName="votes">
+        <div><span *ngIf="itemForm.get('votes')?.touched && itemForm.get('votes')?.errors?.['required']">Votes Required</span>
+        </div>
+    </div>  <div >
+        <label class="input-label">Popularity</label><br>
+        <input class="input" type="number" formControlName="popularity">
+        <div><span *ngIf="itemForm.get('popularity')?.touched && itemForm.get('popularity')?.errors?.['required']">Popularity Required</span>
+        </div>
+    </div>  <div >
+        <label class="input-label">Ratings</label><br>
+        <input class="input" type="number" min="0" max="5"  formControlName="ratings">
+        <div><span *ngIf="itemForm.get('ratings')?.touched && itemForm.get('ratings')?.errors?.['required']">Ratings Required</span>
+            <span *ngIf="itemForm.get('ratings')?.touched && (itemForm.get('ratings')?.errors?.['max'] || itemForm.get('ratings')?.errors?.['min'])">Ratings range from 0-5</span>
+        </div>
+    </div>
+    <div class="buttons">
+
+    <button class="reset" type="reset">Reset</button>
+    <button class="submit" (click)="submit()" type="submit" [disabled]="itemForm.invalid"> Submit</button>
+</div>
+</form>
+  </div>
+    </div>

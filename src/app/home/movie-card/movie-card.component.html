@@ -1,0 +1,28 @@
+<div class="body">
+    <div class="card-list">
+        <div class="card" *ngFor="let movie of movies">
+            <div class="update">
+                <a (click)="editMovie(movie)">Edit</a>
+                <a (click)="deleteMovie(movie.id)">Delete</a>
+            </div>
+            <img [src]="movie.photo" crossorigin="anonymous" Access-Control-Allow-Origin="*">
+            <div class="votes-date">
+            <div class="title"><b>Title:&nbsp;</b>{{movie.title}}</div>
+            <div><b>Price:&nbsp;</b>{{movie.price}}$</div>
+            </div>
+            <div><b>Date:&nbsp;</b>{{movie.date}}</div>
+
+            <div class="votes-date border">
+                <div>
+                    <b>Votes:&nbsp;</b>
+                    {{movie.votes}}
+                </div>
+                <div><b>Popularity:&nbsp;</b>{{movie.popularity}}</div>
+            </div>
+            <div class="flex">
+                <b>Rating:&nbsp;</b>
+                <div class="rating" [style.width.rem]="movie.ratings*2" [ngClass]="{'red':movie.ratings<2,'green':movie.ratings>=2}"></div>&nbsp;{{movie.ratings}}
+            </div>
+        </div>
+    </div>
+</div>

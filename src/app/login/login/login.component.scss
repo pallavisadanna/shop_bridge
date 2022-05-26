@@ -1,0 +1,54 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-card{
+    width: 23%;
+    height: 20rem;
+    border-radius: 0.5rem;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: var(--secondary-color);
+    // background-image: var(--background-immage);
+}
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: x-large;
+    color: black;
+}
+.content{
+    padding: 2rem;
+}
+.username{
+    margin-bottom: 1rem;
+}
+.input-label{
+    font-weight: bold;
+}
+.input{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 3px;
+}
+.submit1{
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+    margin-top: 2rem;
+    button{
+        border: none;
+        padding: 5px 14px 5px 14px;
+        border-radius: 8px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    button:hover{
+        border: 1px solid white;
+        color: black;
+    }
+}

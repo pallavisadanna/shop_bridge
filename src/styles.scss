@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/base';
+
+.submit{
+background-color: var(--secondary-color);
+padding: 0.3rem 1rem;
+display: flex;
+justify-content: center;
+align-items:center;
+border: 1px solid var(--secondary-color);
+border-radius: 0.4rem;
+}
+.submit:hover{
+    // color: white;
+    border: 1px solid white;
+}
+.reset{
+    background-color: rgb(188, 185, 185);
+    padding: 0.3rem 1rem;
+display: flex;
+justify-content: center;
+align-items:center;
+border: 1px solid rgb(179, 177, 177);
+border-radius: 0.4rem;
+}
+.reset:hover{
+    border: 1px solid white;
+}
